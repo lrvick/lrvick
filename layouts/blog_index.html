@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for post in page_posts %}
+  <article>
+    {% if post.image %}
+    <a class="entry-image" href="/blog/{{ post.permalink }}"><img class="right" src="{{ post.image }}" /></a>
+    {% endif %}
+    <h2><a href="/blog/{{ post.permalink }}">{{ post.title }}</a></h2>
+    <div class="time">
+      <span>{{ post.date.strftime('%d') }}</span>
+      <span>{{ post.date.strftime('%b') }}</span>
+      <span>{{ post.date.strftime('%Y') }}</span>
+    </div>
+    <p>{{ post.content|striptags|truncate(500) }}</p>
+      <div class='links'>
+        <a href='{{ config.url }}/blog/{{ post.permalink }}/'>Read More</a> | <a href='{{ config.url }}/blog/{{ post.permalink }}/#disqus_thread' data-disqus-identifier="{{ post.permalink }}">Comments</a>
+      </div>
+      <div class="entry-tags">
+        <span>Tags:</span>
+        {% for tag in post.tags %}
+        <span class='tag'><a href="#">{{tag}}</a></span>
+        {% endfor %}
+      </div>
+  </article>
+  {% endfor %}
+    <div class="pagination">
+    {% if page_num - 1 > 0 %}
+        <a href="/blog/pages/{{ page_num - 1 }}" class="prev">&laquo; previous </a>
+    {% else %}
+        <span class="prev disabled">&laquo; previous </span>
+    {% endif %}
+    {% for num in range(1,total_pages + 2) %}
+        {% if num == page_num %}
+            <a href="#" class="current page">{{ num }}</a>
+        {% else %}
+        <a href="{{ config.url }}/blog/pages/{{ num }}" class="page">{{ num }}</a>
+        {% endif %}
+    {% endfor %}
+    {% if page_num + 1 <= total_pages %}
+    <a href="{{ config.url }}/blog/pages/{{ page_num + 1 }}" class="next">next &raquo;</a>
+    {% else %}
+        <span class="next disabled">next &raquo;</span>
+    {% endif %}
+    </div>
+{% endblock %}

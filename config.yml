@@ -1,0 +1,14 @@
+# Main Configuration (Required)
+url         : http://new.lrvick.net
+title       : Lance R. Vick
+subtitle    : Life. Love. Tech... and other stuff.
+description : The personal website and blog of Lance R. Vick, Software Engineer at Tawlk LLC.
+author      : Lance R. Vick
+email       : lance@lrvick.net
+paginate    : 6
+
+# Disqus Commenting
+disqus_shortname : lrvick
+
+# Google Analytics
+google_analytics_id :
