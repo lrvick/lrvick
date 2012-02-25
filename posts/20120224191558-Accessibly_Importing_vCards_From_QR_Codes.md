@@ -97,7 +97,7 @@ that it is a vCard that should be handled by the Contacts app.
 Details on this issue can be found [here](http://code.google.com/p/android/issues/detail?id=9215&q=vcard&colspec=ID%20Type%20Status%20Owner%20Summary%20Stars)
 
 After much toying around I found that if you serve your VCF files with the
-following headers Android treat them as importable vCard files:
+following headers, Android will treat them as importable vCard files:
 
     :::
     Content-Disposition: attachment;
