@@ -74,14 +74,14 @@ good quality laser printer you might get away with using a full vCard, however
 be sure to test a lot of phones if you try to make sure their cameras can pick
 it up.
 
-The only way I could get this method to work well on an average printer, was
-to include only the bare essentials in the vCard. Name, phone, email. Anything
-more than that and the QR tends to end up too large.
+The only way I could get this method to work well on an average quality
+printer, was to include only the bare essentials in the vCard. Name, phone,
+email. Anything more than that and the QR tends to end up too large.
 
 This brings us to the reality, that embedding anything much longer than a URL
-or a very small vCards is probably going to result in a QR code too dense to
+or a very small vCard is probably going to result in a QR code too dense to
 be read clearly by most smart phones, if printed with a lower-end printer, or
-or from any distance.
+from any distance.
 
 At this point I thought to myself "Ok, so I will just put the vCard file on my
 server and link to it".
@@ -96,15 +96,8 @@ that it is a vCard that should be handled by the Contacts app.
 
 Details on this issue can be found [here](http://code.google.com/p/android/issues/detail?id=9215&q=vcard&colspec=ID%20Type%20Status%20Owner%20Summary%20Stars)
 
-After much toying around I found that if you serve the files with just the
-right headers in your web server, you can bypass this issue and Android will see
-the vCard as a vCard and let you import it.
-
-In order to do this you will need to configure your web server to serve VCF
-files with some special headers.
-
-Whenever a target vCard file is accessed it must contain the following headers
-for Android to treat is as an importable vCard file:
+After much toying around I found that if you serve your VCF files with the
+following headers Android treat them as importable vCard files:
 
     :::
     Content-Disposition: attachment;
