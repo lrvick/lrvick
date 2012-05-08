@@ -69,14 +69,13 @@ just adjust steps accordingly.
     mkdir arch
     cd arch
     wget http://archlinuxarm.org/os/ArchLinuxARM-omap-smp-latest.tar.gz
-    tar xzf ArchLinuxARM*.tar.gz
-    rm ArchLinuxARM*.tar.gz
-    mount -o bind /dev/ /data/local/arch/dev
-    mount -t proc /proc /data/local/arch/proc
-    mount -t proc proc /proc
-    mount -t sysfs sysfs /sys
+    tar xzf Arch*.tar.gz
+    rm Arch*.tar.gz
+    mount -o bind /dev dev
+    mount -t proc proc proc
+    mount -t sysfs sysfs sys
+    ln -s /proc/self/fd dev/fd
     echo "nameserver 8.8.8.8" >> /data/local/arch/etc/resolv.conf
-    ln -s /proc/self/fd /data/local/arch/dev/fd
 
 ### Enter environment and update
 
