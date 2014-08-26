@@ -1,26 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
   <article>
-  <img class="right header" src="{{ content.image }}"/>
-    <h2>{{ content.title }}</h2>
+  <img class="right header" src="{{ image }}"/>
+    <h2>{{ title }}</h2>
     <p class="entry-timeauthor">
       Posted on:
       <time>
-        <span>{{ content.date.strftime('%d') }}</span>
-        <span>{{ content.date.strftime('%b') }}</span>
-        <span>{{ content.date.strftime('%Y') }}</span>
+        <span>{{ date.strftime('%d') }}</span>
+        <span>{{ date.strftime('%b') }}</span>
+        <span>{{ date.strftime('%Y') }}</span>
       </time>
     </p>
-    {{ content.content|safe }}
+    {{ content|safe }}
   </article>
     <h2 class="comments">Comments</h2>
     <article id="disqus_thread">
     </article>
     <script type="text/javascript">
       var disqus_shortname = '{{ config.disqus_shortname }}';
-      var disqus_identifier = '{{ content.permalink }}';
-      var disqus_title = '{{ content.title }}';
-      var disqus_url = '{{config.url}}/blog/{{content.permalink}}/';
+      var disqus_identifier = '{{ permalink }}';
+      var disqus_title = '{{ title }}';
+      var disqus_url = '{{config.url}}/blog/{{permalink}}/';
       (function() {
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
