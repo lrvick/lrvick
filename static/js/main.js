@@ -27,7 +27,7 @@ $(document).ready(function(){
     //    $('.twitter .time').cuteTime({refresh: 40});
     //})
 
-    $.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=lrvick&api_key=30faa843dc740d5b76b0f1e77a66db59&format=json&callback=?',function(data){
+    $.getJSON('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=lrvick&api_key=30faa843dc740d5b76b0f1e77a66db59&format=json&callback=?',function(data){
         var items = [];
         $.each(data.recenttracks.track, function(key,val){
             var date
@@ -42,7 +42,7 @@ $(document).ready(function(){
         $('.lastfm .time').cuteTime({refresh: 40});
     })
 
-    $.getJSON('http://gdata.youtube.com/feeds/api/users/lrvick/uploads?v=2&alt=jsonc&callback=?',function(data){
+    $.getJSON('https://gdata.youtube.com/feeds/api/users/lrvick/uploads?v=2&alt=jsonc&callback=?',function(data){
         var items = []
         $.each(data.data.items,function(key,value){
             items.push('<li><span class="time">'+value.uploaded+'</span><a href="http://youtu.be/'+value.id+'">'+value.title+'</a></li>');
