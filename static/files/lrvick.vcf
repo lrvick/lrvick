@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Vick;Lance;;;
+FN:Lance Vick
+TEL;CELL:407-283-7596
+EMAIL;WORK:lance@tawlk.com
+EMAIL;HOME:lance@lrvick.net
+ADR;HOME:;;2264 Gator Dr;Orlando;FL;32807;
+ADR;WORK:;;4545 36th St.;Orlando;FL;32811;
+ORG:Tawlk
+TITLE:Founder / Lead Engineer
+URL:http://tawlk.com
+URL:http://lrvick.net
+X-GOOGLE-TALK:lance@lrvick.net
+END:VCARD
