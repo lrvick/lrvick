@@ -1,3 +1,9 @@
-[submodule "deploy"]
-	path = deploy
-	url = git@github.com:lrvick/lrvick.git
+[submodule "static/js/jquery-githubindex"]
+	path = static/js/jquery-githubindex
+	url = git://github.com/lrvick/jquery-githubindex.git
+[submodule "static/js/jquery-picasagallery"]
+	path = static/js/jquery-picasagallery
+	url = git://github.com/lrvick/jquery-picasagallery.git
+[submodule "static/js/CuteTime"]
+	path = static/js/CuteTime
+	url = https://github.com/theproductguy/CuteTime.git
