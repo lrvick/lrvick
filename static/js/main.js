@@ -1,16 +1,16 @@
 $(document).ready(function(){
-
-    $.getJSON('https://github.com/lrvick.json?callback=?',function(data){
+    $.getJSON('https://api.github.com/users/lrvick/events?callback=?',function(data){
         var items = [];
-        $.each(data, function(key,val){
-            if (val.type == 'PushEvent' && val.repository != undefined && val.payload.shas && val.payload.shas[0] ){
-                items.push('<li><span class="time">'+val.created_at+'</span><span class="action">Pushed to: <a href="'+val.url+'">'+val.repository.name+'</a></span><br/> "'+val.payload.shas[0][2]+'"</li>');
+        $.each(data.data, function(key,val){
+            console.log(key,val)
+            if (val.type == 'PushEvent' ){
+                items.push('<li><span class="time">'+val.created_at+'</span><span class="action">Pushed to: <a href="https://github.com/'+val.repo.name+'">'+val.repo.name+'</a></span><br/> "'+val.payload.commits[0].message+'"</li>');
             } else if (val.type == 'FollowEvent'){
                 items.push('<li><span class="time">'+val.created_at+'</span><span class="action">Followed: <a href="'+val.url+'">'+val.payload.target.login+'</a></span></li>');
             } else if (val.type == 'WatchEvent'){
-                items.push('<li><span class="time">'+val.created_at+'</span><span class="action">Watched: <a href="'+val.url+'">'+val.repository.name+'</a></span></li>');
+                items.push('<li><span class="time">'+val.created_at+'</span><span class="action">Watched: <a href="https://github.com/'+val.repo.name+'">'+val.repo.name+'</a></span></li>');
             } else if (val.type == 'IssueCommentEvent'){
-                items.push('<li><span class="time">'+val.created_at+'</span><span class="action">Commented on: <a href="'+val.url+'">'+val.repository.name+'</a><br/></span></li>');
+                items.push('<li><span class="time">'+val.created_at+'</span><span class="action">Commented on: <a href="https://github.com/'+val.repo.name+'">'+val.repo.name+'</a><br/></span></li>');
             }
         })
         $('<ul/>',{ html: items.slice(0,5).join('\n') }).appendTo('.github')
