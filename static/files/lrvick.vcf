@@ -2,14 +2,12 @@ BEGIN:VCARD
 VERSION:2.1
 N:Vick;Lance;;;
 FN:Lance Vick
-TEL;CELL:407-283-7596
-EMAIL;WORK:lance@tawlk.com
+TEL;CELL:650-686-8819
+EMAIL;WORK:lance@pebble.com
 EMAIL;HOME:lance@lrvick.net
-ADR;HOME:;;2264 Gator Dr;Orlando;FL;32807;
-ADR;WORK:;;4545 36th St.;Orlando;FL;32811;
-ORG:Tawlk
-TITLE:Founder / Lead Engineer
-URL:http://tawlk.com
+ADR;HOME:;;2 Newell Court #2305;East Palo Alto;CA;94303;
+ADR;WORK:;;900 Middlefield Road, 5th Floor;Redwood City;CA;94063;
+ORG:Pebble Technology
+TITLE: Head Of Web Operations
 URL:http://lrvick.net
-X-GOOGLE-TALK:lance@lrvick.net
 END:VCARD
