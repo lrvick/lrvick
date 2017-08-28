@@ -33,11 +33,11 @@
         {% if num == page_num %}
             <a href="#" class="current page">{{ num }}</a>
         {% else %}
-        <a href="{{ config.url }}/pages/{{ num }}" class="page">{{ num }}</a>
+        <a href="{{ config.url }}/blog/pages/{{ num }}" class="page">{{ num }}</a>
         {% endif %}
     {% endfor %}
     {% if page_num + 1 <= total_pages %}
-    <a href="{{ config.url }}/pages/{{ page_num + 1 }}" class="next">next &raquo;</a>
+    <a href="{{ config.url }}/blog/pages/{{ page_num + 1 }}" class="next">next &raquo;</a>
     {% else %}
         <span class="next disabled">next &raquo;</span>
     {% endif %}
