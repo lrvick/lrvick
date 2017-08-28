@@ -1,8 +1,8 @@
 # Main Configuration (Required)
 url         : http://lrvick.net
 title       : Lance R. Vick
-subtitle    : Life. Love. Tech... and other stuff.
-description : The personal website and blog of Lance R. Vick, Head of Web Operations at Pebble Technology
+subtitle    : I type in terminals and make things.
+description : The personal website and blog of Lance R. Vick
 author      : Lance R. Vick
 email       : lance@lrvick.net
 paginate    : 7

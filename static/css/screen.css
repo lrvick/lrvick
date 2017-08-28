@@ -223,7 +223,10 @@ aside .vcard  a.email{
   line-height:25px;
 }
 aside .vcard .tel .type {
-display:none;
+  display:none;
+}
+aside .vcard .key .type {
+  display:none;
 }
 aside .vcard .url img{
   border:0;

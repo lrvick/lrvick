@@ -3,11 +3,11 @@ VERSION:2.1
 N:Vick;Lance;;;
 FN:Lance Vick
 TEL;CELL:650-686-8819
-EMAIL;WORK:lance@pebble.com
+EMAIL;WORK:lance@bitgo.com
 EMAIL;HOME:lance@lrvick.net
 ADR;HOME:;;2 Newell Court #2305;East Palo Alto;CA;94303;
-ADR;WORK:;;900 Middlefield Road, 5th Floor;Redwood City;CA;94063;
-ORG:Pebble Technology
-TITLE: Head Of Web Operations
+ADR;WORK:;;445 Sherman Ave #200a;Palo Alto;CA;94306;
+ORG:Bitgo, Inc.
+TITLE: Senior DevOps Engineer
 URL:http://lrvick.net
 END:VCARD
