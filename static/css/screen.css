@@ -13,7 +13,7 @@
   clear:none;
   background:transparent;
   line-height:1.2em;
-  color:#000;
+  color: #000;
 }
 
 html {
@@ -85,30 +85,16 @@ header nav a{
   color:#CCC;
   margin-bottom:-30px;
 }
-header nav:hover a{
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -webkit-animation-name: sink;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-direction: normal;
-  -webkit-animation-timing-function:linear;
+header nav a {
+  transition: 0.5s;
 }
 header nav a:hover {
-  -webkit-transform: rotate(-0deg);
-  -moz-transform: rotate(-0deg);
-  transform: rotate(-0deg);
-  text-shadow: 0px 0px 10px #888, 3px 3px 1px #000;
-  color:#CCC;
-  -webkit-animation-name: rise;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-direction: normal;
-  -webkit-animation-timing-function:linear;
+  color: #fff;
 }
 header nav .current {
   font-size:40px;
   color:#FFF;
   margin-top:-3px;
-  text-shadow: 1px 1px 15px #000, 3px 3px 1px #000;
 }
 hr{
   border-top:1px #DDD solid;
@@ -292,7 +278,6 @@ div.time{
   margin:15px 15px 0px 0px;
 }
 div.time span:first-child {
-  text-shadow: #000 0px 0px 5px;
   -webkit-border-top-left-radius:10px;
   -webkit-border-top-right-radius:10px;
   -moz-border-radius-topleft:10px;
@@ -304,19 +289,17 @@ div.time span:first-child {
   text-align:center;
 }
 div.time span:nth-child(2) {
-  text-shadow: #000 0px 0px 1px;
   display:block;
   font-size:24px;
   margin:5px 0 0 5px;
 }
 div.time span:last-child {
   font-size:12px;
-  text-shadow: #000 0px 0px 1px;
   display:block;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   transform: rotate(90deg);
-  margin:23px -50px 0 0px;
+  margin:26px -50px 0 0px;
 }
 a.entry-image img{
   float:right;
@@ -440,6 +423,7 @@ article article a.entry-image {
   font-weight:700;
 }
 article article h2 a {
+  transition: 0.5s;
   font-size:18px;
   font-weight:bold;
 }
@@ -450,9 +434,6 @@ article article .entry-image {
 article article p a,
 article article h2 a {
   background:none;
-  box-shadow: 0px 0px 0px #000;
-  -moz-box-shadow: 0px 0px 0px #000;
-  -webkit-box-shadow: 0px 0px 0px #000;
   -webkit-border-radius:0px;
   -moz-border-radius:0px;
 }
@@ -656,7 +637,6 @@ article h2 a,
 article h3 a,
 article h4 a,
 article h5 a {
-  text-shadow: #999 0px 0px 3px;
   text-decoration:none;
   color:#000;
 }
@@ -665,11 +645,6 @@ article article img{
   -webkit-border-radius:10px;
   -moz-border-radius:10px;
   max-width:100%;
-  /*
-  box-shadow: 0px 0px 4px #000;
-  -moz-box-shadow: 0px 0px 4px #000;
-  -webkit-box-shadow: 0px 0px 4px #000;
-   */
 }
 article article img.left{
   margin:10px 15px 10px 0;
